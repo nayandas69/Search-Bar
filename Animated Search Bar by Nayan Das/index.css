@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 5px;
+    width: 50px;
+    /* Initial collapsed width */
+    height: 50px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: width 0.5s ease-in-out;
+}
+
+.search-icon,
+.mic-icon {
+    font-size: 20px;
+    padding: 13px;
+    color: #607d8b;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.search-icon:hover,
+.mic-icon:hover {
+    color: #ff6f61;
+    transform: scale(1.2);
+}
+
+.input {
+    background-color: transparent;
+    border: none;
+    margin: 0 10px;
+    width: 0;
+    /* Hidden input */
+    outline: none;
+    color: #333;
+    transition: width 0.5s ease-in-out;
+    font-size: 16px;
+}
+
+.active.search-bar-container {
+    width: 300px;
+    /* Expanded width */
+}
+
+.active .input {
+    width: 100%;
+    /* Expanded input width */
+}
+
+.active .mic-icon {
+    width: 20px;
+    /* Icon size when expanded */
+    margin-right: 10px;
+    /* Adjust margin */
+    font-size: 20px;
+    /* Icon font size */
+}
